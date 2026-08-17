@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SkillBridge | Applications</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-link"></i>
+
+        </div>
+
+        <span>
+            SkillBridge
+        </span>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <a href="employer-dashboard.html">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <a href="create-opportunity.html">
+
+            <i class="fa-solid fa-plus"></i>
+
+            <span>
+                Post Opportunity
+            </span>
+
+        </a>
+
+
+        <a href="employer-opportunities.html">
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            <span>
+                My Opportunities
+            </span>
+
+        </a>
+
+
+        <a
+            href="employer-applications.html"
+            class="active"
+        >
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>
+                Applications
+            </span>
+
+        </a>
+
+
+        <a href="talent.html">
+
+            <i class="fa-solid fa-users"></i>
+
+            <span>
+                Find Talent
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a href="#">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<main class="main-content">
+
+
+    <header class="topbar">
+
+        <div>
+
+            <h1>
+                Applications
+            </h1>
+
+            <p>
+                Review students who applied to your opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="profile-mini">
+
+            <div class="avatar">
+                TH
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Tech Hub
+                </strong>
+
+                <small>
+                    Employer
+                </small>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <section class="applications-hero">
+
+        <div>
+
+            <span class="section-label">
+                TALENT DISCOVERY
+            </span>
+
+            <h2>
+                Find your next great talent.
+            </h2>
+
+            <p>
+                SkillBridge ranks applicants according
+                to their skills, experience, activities,
+                projects and verified achievements.
+            </p>
+
+        </div>
+
+
+        <div class="application-summary">
+
+            <div>
+
+                <strong id="totalApplications">
+                    0
+                </strong>
+
+                <span>
+                    Applications
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong id="pendingApplications">
+                    0
+                </strong>
+
+                <span>
+                    Pending
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong id="acceptedApplications">
+                    0
+                </strong>
+
+                <span>
+                    Accepted
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="applications-toolbar">
+
+        <div class="application-filter">
+
+            <i class="fa-solid fa-filter"></i>
+
+            <select id="statusFilter">
+
+                <option value="All">
+                    All Applications
+                </option>
+
+                <option value="Pending">
+                    Pending
+                </option>
+
+                <option value="Accepted">
+                    Accepted
+                </option>
+
+                <option value="Rejected">
+                    Rejected
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="application-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="applicationSearch"
+                placeholder="Search applicants..."
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <section
+        id="applicationsContainer"
+        class="applications-container"
+    ></section>
+
+
+</main>
+
+
+
+<script src="../js/employer-applications.js"></script>
+
+</body>
+
+</html>

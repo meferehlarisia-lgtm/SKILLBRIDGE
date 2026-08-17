@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | SkillBridge</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="../index.html" class="logo">
+                Skill<span>Bridge</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="profile.html">
+                    My Profile
+                </a>
+
+                <a href="#">
+                    Projects
+                </a>
+
+                <a href="#">
+                    Opportunities
+                </a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="../index.html" class="login-btn">
+                    Logout
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PROFILE ================= -->
+
+    <main class="profile-page">
+
+        <div class="container">
+
+
+            <!-- PROFILE HEADER -->
+
+            <section class="profile-banner">
+
+                <div class="profile-main">
+
+                    <div class="large-avatar" id="profileInitials">
+                        LM
+                    </div>
+
+                    <div class="profile-info">
+
+                        <span class="verified-badge">
+                            ✓ Verified Student
+                        </span>
+
+                        <h1 id="profileName">
+                            Student Name
+                        </h1>
+
+                        <p id="profileRole">
+                            Software Engineering Student
+                        </p>
+
+                        <p class="profile-location">
+                            📍 Yaoundé, Cameroon
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="editProfileBtn"
+                >
+                    Edit Profile
+                </button>
+
+            </section>
+
+
+            <!-- PROFILE CONTENT -->
+
+            <section class="profile-grid">
+
+
+                <!-- ================= LEFT ================= -->
+
+                <div class="profile-left">
+
+
+                    <!-- ABOUT -->
+
+                    <div class="profile-card">
+
+                        <div class="profile-card-header">
+
+                            <h2>
+                                About Me
+                            </h2>
+
+                        </div>
+
+                        <p id="profileBio">
+
+                            Tell the SkillBridge community
+                            about yourself, your interests,
+                            and what you are passionate about.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- SKILLS -->
+
+                    <!-- ================= MY SKILLS ================= -->
+
+<div class="profile-card">
+
+    <div class="profile-card-header">
+
+        <h2>My Skills</h2>
+
+        <button
+            type="button"
+            class="small-btn"
+            id="addSkillBtn"
+        >
+            + Add Skill
+        </button>
+
+    </div>
+
+
+    <!-- SKILLS DISPLAY -->
+
+    <div
+        class="profile-skills"
+        id="skillsContainer"
+    >
+
+        <div class="skill-item">
+
+            <div>
+                <strong>HTML</strong>
+                <small>Intermediate</small>
+            </div>
+
+        </div>
+
+
+        <div class="skill-item">
+
+            <div>
+                <strong>CSS</strong>
+                <small>Intermediate</small>
+            </div>
+
+        </div>
+
+
+        <div class="skill-item">
+
+            <div>
+                <strong>Photoshop</strong>
+                <small>Intermediate</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ADD SKILL FORM ================= -->
+
+    <div
+        class="skill-form"
+        id="skillForm"
+        style="display: none;"
+    >
+
+        <label for="skillInput">
+            Skill Name
+        </label>
+
+        <input
+            type="text"
+            id="skillInput"
+            placeholder="e.g. JavaScript"
+        >
+
+
+        <label for="skillLevel">
+            Proficiency Level
+        </label>
+
+        <select id="skillLevel">
+
+            <option value="">
+                Select proficiency
+            </option>
+
+            <option value="Beginner">
+                Beginner
+            </option>
+
+            <option value="Intermediate">
+                Intermediate
+            </option>
+
+            <option value="Advanced">
+                Advanced
+            </option>
+
+        </select>
+
+
+        <div class="form-actions">
+
+            <button
+                type="button"
+                class="primary-btn"
+                id="saveSkillBtn"
+            >
+                Save Skill
+            </button>
+
+            <button
+                type="button"
+                class="cancel-btn"
+                id="cancelSkillBtn"
+            >
+                Cancel
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+                
+                   <!-- ================= SKILLS I WANT TO LEARN ================= -->
+
+<div class="profile-card">
+
+    <div class="profile-card-header">
+
+        <h2>
+            Skills I Want To Learn
+        </h2>
+
+        <button
+            type="button"
+            class="small-btn"
+            id="addLearningSkillBtn"
+        >
+            + Add Skill
+        </button>
+
+    </div>
+
+
+    <div
+        class="profile-skills"
+        id="learningSkillsContainer"
+    >
+
+        <span class="learning-tag">
+            JavaScript
+        </span>
+
+        <span class="learning-tag">
+            React
+        </span>
+
+        <span class="learning-tag">
+            Backend Development
+        </span>
+
+    </div>
+
+
+    <!-- ADD LEARNING SKILL FORM -->
+
+    <div
+        class="skill-form"
+        id="learningSkillForm"
+        style="display: none;"
+    >
+
+        <input
+            type="text"
+            id="learningSkillInput"
+            placeholder="e.g. Python"
+        >
+
+
+        <div class="form-actions">
+
+            <button
+                type="button"
+                class="primary-btn"
+                id="saveLearningSkillBtn"
+            >
+                Save Skill
+            </button>
+
+            <button
+                type="button"
+                class="cancel-btn"
+                id="cancelLearningSkillBtn"
+            >
+                Cancel
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+                    <!-- EXPERIENCE -->
+
+                    <div class="profile-card">
+
+                        <div class="profile-card-header">
+
+                            <h2>
+                                Experience
+                            </h2>
+
+                            <button
+                                class="small-btn"
+                                id="addExperienceBtn"
+                            >
+                                + Add Experience
+                            </button>
+
+                        </div>
+
+
+                        <div class="experience-item">
+
+                            <div class="experience-icon">
+                                🚀
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Student Web Developer
+                                </h3>
+
+                                <p>
+                                    Built web interfaces and
+                                    student management systems.
+                                </p>
+
+                                <small>
+                                    2026
+                                </small>
+
+                            </div>
+
+                        </div>
+                                    <!-- ADD EXPERIENCE FORM -->
+
+<div
+    class="experience-form"
+    id="experienceForm"
+    style="display: none;"
+>
+
+    <h3>
+        Add Experience
+    </h3>
+
+
+    <div class="form-group">
+
+        <label for="experienceTitle">
+            Position / Role
+        </label>
+
+        <input
+            type="text"
+            id="experienceTitle"
+            placeholder="e.g. Web Developer Intern"
+        >
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="experienceOrganization">
+            Organization
+        </label>
+
+        <input
+            type="text"
+            id="experienceOrganization"
+            placeholder="e.g. DA Electronics"
+        >
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="experienceDescription">
+            Description
+        </label>
+
+        <textarea
+            id="experienceDescription"
+            rows="4"
+            placeholder="What did you do?"
+        ></textarea>
+
+    </div>
+
+
+    <div class="experience-form-row">
+
+        <div class="form-group">
+
+            <label for="experienceStart">
+                Start Year
+            </label>
+
+            <input
+                type="number"
+                id="experienceStart"
+                placeholder="2026"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="experienceEnd">
+                End Year
+            </label>
+
+            <input
+                type="text"
+                id="experienceEnd"
+                placeholder="Present"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="form-actions">
+
+        <button
+            type="button"
+            class="primary-btn"
+            id="saveExperienceBtn"
+        >
+            Save Experience
+        </button>
+
+        <button
+            type="button"
+            class="cancel-btn"
+            id="cancelExperienceBtn"
+        >
+            Cancel
+        </button>
+
+    </div>
+
+</div>
+
+                    </div>
+
+
+                    <!-- VERIFIED WORK -->
+
+<section class="profile-section verified-work-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                VERIFIED RECORD
+            </span>
+
+            <h2>
+                Verified Work
+            </h2>
+
+            <p>
+                Work and activities that have been
+                verified through SkillBridge.
+            </p>
+
+        </div>
+
+        <div class="verified-work-total">
+
+            <strong id="verifiedWorkCount">
+                0
+            </strong>
+
+            <span>
+                Verified
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="verifiedWorkContainer"
+        class="verified-work-container"
+    >
+
+        <div class="verified-empty">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>
+                No verified work yet
+            </h3>
+
+            <p>
+                Complete projects and submit evidence
+                to build your verified record.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+               <!-- ================= ACTIVITIES ================= -->
+
+                    <div class="profile-card">
+
+                        <div class="profile-card-header">
+
+                            <h2>
+                                My Activities
+                            </h2>
+
+                            <button
+                                class="small-btn"
+                                id="addActivityBtn"
+                                type="button"
+                            >
+                                + Add Activity
+                            </button>
+
+                        </div>
+
+
+                        <!-- ACTIVITY FORM -->
+
+                        <div
+                            class="activity-form"
+                            id="activityForm"
+                            style="display: none;"
+                        >
+
+                            <div class="form-group">
+
+                                <label for="activityTitle">
+                                    Activity
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="activityTitle"
+                                    placeholder="e.g. Built a Student Management System"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="activitySkill">
+                                    Skill Demonstrated
+                                </label>
+
+                                <select id="activitySkill">
+
+                                    <option value="">
+                                        Select a skill
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="activityResult">
+                                    Result
+                                </label>
+
+                                <select id="activityResult">
+
+                                    <option value="">
+                                        Select result
+                                    </option>
+
+                                    <option value="Successful">
+                                        Successful
+                                    </option>
+
+                                    <option value="Completed">
+                                        Completed
+                                    </option>
+
+                                    <option value="In Progress">
+                                        In Progress
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="activityEvidence">
+                                    Evidence / Certificate
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="activityEvidence"
+                                    placeholder="e.g. Certificate, GitHub project, award..."
+                                >
+
+                            </div>
+
+
+                            <div class="activity-form-actions">
+
+                                <button
+                                    type="button"
+                                    class="primary-btn"
+                                    id="saveActivityBtn"
+                                >
+                                    Save Activity
+                                </button>
+
+                                <button
+                        type="button"
+                      class="cancel-btn"
+                        id="cancelActivityBtn"
+>
+                                   Cancel
+                                         </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ACTIVITIES LIST -->
+
+                        <div
+                            class="activity-list"
+                            id="activityList"
+                        >
+
+                            <div class="empty-activity">
+
+                                <div class="empty-activity-icon">
+                                    🎯
+                                </div>
+
+                                <h3>
+                                    No activities yet
+                                </h3>
+
+                                <p>
+                                    Add activities to show what
+                                    you have accomplished and
+                                    build your SkillBridge record.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PORTFOLIO -->
+
+                    <div class="profile-card">
+
+                        <div class="profile-card-header">
+
+                            <h2>
+                                Portfolio
+                            </h2>
+
+                        </div>
+
+
+                        <div class="portfolio-empty">
+
+                            <div>
+                                💼
+                            </div>
+
+                            <h3>
+                                Show what you have built.
+                            </h3>
+
+                            <p>
+                                Add your projects and let
+                                people see your work.
+                            </p>
+
+                            <button
+                                class="primary-btn"
+                            >
+                                Add Project
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ================= RIGHT ================= -->
+
+                <aside class="profile-right">
+
+
+                    <!-- PROFILE COMPLETION -->
+
+                    <div class="profile-card">
+
+                        <h2>
+                            Profile Strength
+                        </h2>
+
+                        <div class="progress-container">
+
+                            <div class="progress-bar">
+                                <div
+                                    class="progress"
+                                    style="width: 65%;"
+                                ></div>
+                            </div>
+
+                            <strong>
+                                65%
+                            </strong>
+
+                        </div>
+
+                        <p class="progress-text">
+                            Complete your profile to get
+                            better project matches.
+                        </p>
+
+                    </div>
+
+
+                    <!-- STATS -->
+
+                    <div class="profile-card">
+
+                        <h2>
+                            My SkillBridge Journey
+                        </h2>
+
+                        <div class="journey-stat">
+
+                            <strong>
+                                0
+                            </strong>
+
+                            <span>
+                                Projects
+                            </span>
+
+                        </div>
+
+                        <div class="journey-stat">
+
+                            <strong>
+                                0
+                            </strong>
+
+                            <span>
+                                Activities
+                            </span>
+
+                        </div>
+
+                        <div class="journey-stat">
+
+                            <strong>
+                                0
+                            </strong>
+
+                            <span>
+                                Certificates
+                            </span>
+
+                        </div>
+
+                        <div class="journey-stat">
+
+                            <strong>
+                                3
+                            </strong>
+
+                            <span>
+                                Skills
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MATCH PREVIEW -->
+
+                    <div class="profile-card match-preview">
+
+                        <span>
+                            🎯 MATCHING
+                        </span>
+
+                        <h2>
+                            Your profile powers
+                            SkillBridge matching.
+                        </h2>
+
+                        <p>
+                            The more information you provide,
+                            the better projects and people
+                            we can recommend to you.
+                        </p>
+
+                    </div>
+
+
+                </aside>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/app.js"></script>
+
+</body>
+
+</html>

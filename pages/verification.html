@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SkillBridge | Verification</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-link"></i>
+            </div>
+
+            <span>SkillBridge</span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="../index.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                <span>My Profile</span>
+            </a>
+
+            <a href="projects.html">
+                <i class="fa-solid fa-diagram-project"></i>
+                <span>Projects</span>
+            </a>
+
+            <a href="my-projects.html">
+                <i class="fa-solid fa-folder-open"></i>
+                <span>My Projects</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Opportunities</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-users"></i>
+                <span>Community</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-certificate"></i>
+                <span>Certificates</span>
+            </a>
+
+
+            <a href="verification.html">
+
+    <i class="fa-solid fa-shield-halved"></i>
+
+    <span>Verification</span>
+
+</a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <main class="main-content">
+
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Verification
+                </h1>
+
+                <p>
+                    Review submitted project evidence.
+                </p>
+
+            </div>
+
+
+            <div class="profile-mini">
+
+                <div class="avatar">
+                    FL
+                </div>
+
+                <div>
+
+                    <strong>
+                        Larisia
+                    </strong>
+
+                    <small>
+                        Reviewer
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <section class="verification-intro">
+
+            <div>
+
+                <span class="section-label">
+                    EVIDENCE REVIEW
+                </span>
+
+                <h2>
+                    Verify Student Contributions
+                </h2>
+
+                <p>
+                    Review evidence submitted by students
+                    and confirm whether their project work
+                    can be verified.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="verification-stats">
+
+            <div class="verification-stat">
+
+                <span>
+                    Pending
+                </span>
+
+                <strong id="pendingCount">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="verification-stat">
+
+                <span>
+                    Verified
+                </span>
+
+                <strong id="verifiedCount">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="verification-stat">
+
+                <span>
+                    Needs Revision
+                </span>
+
+                <strong id="revisionCount">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="verification-card">
+
+            <div class="verification-card-header">
+
+                <div>
+
+                    <h2>
+                        Evidence Queue
+                    </h2>
+
+                    <p>
+                        Submitted evidence waiting for review.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="verificationQueue"
+                class="verification-queue"
+            >
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="../js/verification.js"></script>
+
+</body>
+
+</html>

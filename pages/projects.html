@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SkillBridge | Projects</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-link"></i>
+            </div>
+
+            <span>SkillBridge</span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="../index.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="profile.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>My Profile</span>
+
+            </a>
+
+
+            <a
+                href="projects.html"
+                class="active"
+            >
+
+                <i class="fa-solid fa-diagram-project"></i>
+
+                <span>Projects</span>
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <span>Opportunities</span>
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>Community</span>
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="fa-solid fa-certificate"></i>
+
+                <span>Certificates</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Projects Match</h1>
+
+                <p>
+                    Discover projects that match your skills and interests.
+                </p>
+
+            </div>
+
+
+            <div class="profile-mini">
+
+                <div class="avatar">
+                    FL
+                </div>
+
+                <div>
+
+                    <strong>
+                        Larisia
+                    </strong>
+
+                    <small>
+                        Student
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= MATCH HERO ================= -->
+
+        <section class="project-hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Skill Matching
+                </span>
+
+
+                <h2>
+                    Find projects where
+                    <span>your skills matter.</span>
+                </h2>
+
+
+                <p>
+
+                    SkillBridge compares your skills,
+                    experience and activities with
+                    project requirements to help you
+                    discover the right opportunities.
+
+                </p>
+
+            </div>
+
+
+            <div class="match-visual">
+
+                <div class="match-circle">
+
+                    <strong id="topMatchScore">
+                        0%
+                    </strong>
+
+                    <span>
+                        Match
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SEARCH ================= -->
+
+        <section class="project-controls">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-search"></i>
+
+                <input
+                    type="text"
+                    id="projectSearch"
+                    placeholder="Search projects..."
+                >
+
+            </div>
+
+
+            <div class="category-filters">
+
+                <button
+                    class="category-btn active"
+                    data-category="All"
+                >
+                    All
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="Web Development"
+                >
+                    Web Development
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="UI/UX"
+                >
+                    UI/UX
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="Graphic Design"
+                >
+                    Graphic Design
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="Data"
+                >
+                    Data
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="Community"
+                >
+                    Community
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PROJECT HEADER ================= -->
+
+        <section class="projects-heading">
+
+            <div>
+
+                <h2>
+                    Recommended Projects
+                </h2>
+
+                <p id="projectCount">
+                    Finding projects for you...
+                </p>
+
+            </div>
+
+
+            <select id="sortProjects">
+
+                <option value="match">
+                    Best Match
+                </option>
+
+                <option value="newest">
+                    Newest
+                </option>
+
+                <option value="members">
+                    Most Needed
+                </option>
+
+            </select>
+
+        </section>
+
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section
+            class="projects-grid"
+            id="projectsContainer"
+        >
+
+        </section>
+
+
+    </main>
+
+
+    <script src="../js/projects.js"></script>
+
+</body>
+
+</html>

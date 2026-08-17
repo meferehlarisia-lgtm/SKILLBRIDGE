@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SkillBridge | Post Opportunity</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-link"></i>
+        </div>
+
+        <span>
+            SkillBridge
+        </span>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <a href="employer-dashboard.html">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a
+            href="create-opportunity.html"
+            class="active"
+        >
+            <i class="fa-solid fa-plus"></i>
+            <span>Post Opportunity</span>
+        </a>
+
+        <a href="employer-opportunities.html">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>My Opportunities</span>
+        </a>
+
+        <a href="employer-applications.html">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>Applications</span>
+        </a>
+
+        <a href="talent.html">
+            <i class="fa-solid fa-users"></i>
+            <span>Find Talent</span>
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+
+    </div>
+
+</aside>
+
+
+<main class="main-content">
+
+    <header class="topbar">
+
+        <div>
+
+            <h1>
+                Post an Opportunity
+            </h1>
+
+            <p>
+                Tell students what you are looking for.
+            </p>
+
+        </div>
+
+
+        <div class="profile-mini">
+
+            <div class="avatar">
+                TH
+            </div>
+
+            <div>
+
+                <strong>
+                    Tech Hub
+                </strong>
+
+                <small>
+                    Employer
+                </small>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <section class="opportunity-form-wrapper">
+
+        <div class="form-introduction">
+
+            <span class="section-label">
+                CREATE OPPORTUNITY
+            </span>
+
+            <h2>
+                Find the right student talent.
+            </h2>
+
+            <p>
+                The information you provide will be used
+                by SkillBridge to match this opportunity
+                with students based on their skills,
+                projects and verified experience.
+            </p>
+
+        </div>
+
+
+        <form
+            id="opportunityForm"
+            class="opportunity-form"
+        >
+
+            <div class="form-section">
+
+                <h3>
+                    Basic Information
+                </h3>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="opportunityTitle">
+                            Opportunity Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="opportunityTitle"
+                            placeholder="e.g. Frontend Developer Intern"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="companyName">
+                            Company / Organization
+                        </label>
+
+                        <input
+                            type="text"
+                            id="companyName"
+                            placeholder="e.g. Tech Innovation Hub"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="opportunityLocation">
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="opportunityLocation"
+                            placeholder="e.g. Yaoundé"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="opportunityType">
+                            Opportunity Type
+                        </label>
+
+                        <select
+                            id="opportunityType"
+                            required
+                        >
+
+                            <option value="">
+                                Select type
+                            </option>
+
+                            <option value="Internship">
+                                Internship
+                            </option>
+
+                            <option value="Part-time">
+                                Part-time
+                            </option>
+
+                            <option value="Full-time">
+                                Full-time
+                            </option>
+
+                            <option value="Project">
+                                Project
+                            </option>
+
+                            <option value="Volunteer">
+                                Volunteer
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <h3>
+                    Opportunity Description
+                </h3>
+
+                <div class="form-group">
+
+                    <label for="opportunityDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="opportunityDescription"
+                        rows="6"
+                        placeholder="Describe the role, responsibilities and what the student will work on..."
+                        required
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <h3>
+                    Required Skills
+                </h3>
+
+                <p class="form-help">
+                    Add the skills a student should have
+                    to be considered for this opportunity.
+                </p>
+
+
+                <div class="skill-input-row">
+
+                    <input
+                        type="text"
+                        id="requiredSkillInput"
+                        placeholder="e.g. JavaScript"
+                    >
+
+                    <button
+                        type="button"
+                        id="addRequiredSkillBtn"
+                        class="secondary-btn"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        Add Skill
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="requiredSkillsList"
+                    class="selected-skills"
+                ></div>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <h3>
+                    Experience Requirements
+                </h3>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="minimumProjects">
+                            Minimum Projects
+                        </label>
+
+                        <input
+                            type="number"
+                            id="minimumProjects"
+                            min="0"
+                            value="0"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="minimumVerified">
+                            Minimum Verified Activities
+                        </label>
+
+                        <input
+                            type="number"
+                            id="minimumVerified"
+                            min="0"
+                            value="0"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-actions">
+
+                <a
+                    href="employer-dashboard.html"
+                    class="cancel-btn"
+                >
+                    Cancel
+                </a>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Publish Opportunity
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<script src="../js/create-opportunity.js"></script>
+
+</body>
+
+</html>

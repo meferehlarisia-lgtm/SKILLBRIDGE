@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SkillBridge | Project Workspace</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-link"></i>
+            </div>
+
+            <span>SkillBridge</span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="../index.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                <span>My Profile</span>
+            </a>
+
+            <a href="projects.html">
+                <i class="fa-solid fa-diagram-project"></i>
+                <span>Projects</span>
+            </a>
+
+            <a href="my-projects.html" class="active">
+                <i class="fa-solid fa-folder-open"></i>
+                <span>My Projects</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Opportunities</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-users"></i>
+                <span>Community</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-certificate"></i>
+                <span>Certificates</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+
+        <header class="topbar">
+
+            <div>
+
+                <h1 id="workspaceTitle">
+                    Project Workspace
+                </h1>
+
+                <p id="workspaceSubtitle">
+                    Manage your contribution and project activities.
+                </p>
+
+            </div>
+
+
+            <div class="profile-mini">
+
+                <div class="avatar">
+                    FL
+                </div>
+
+                <div>
+
+                    <strong>
+                        Larisia
+                    </strong>
+
+                    <small>
+                        Student
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- BACK -->
+
+        <a
+            href="my-projects.html"
+            class="project-back"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to My Projects
+
+        </a>
+
+
+
+        <!-- PROJECT HERO -->
+
+        <section
+            class="workspace-hero"
+            id="workspaceHero"
+        >
+
+        </section>
+
+
+
+        <!-- WORKSPACE GRID -->
+
+        <div class="workspace-grid">
+
+
+            <!-- LEFT -->
+
+            <div class="workspace-main">
+
+
+                <!-- ACTIVITIES -->
+
+                <section class="workspace-card">
+
+                    <div class="workspace-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                PROJECT WORK
+                            </span>
+
+                            <h2>
+                                My Activities
+                            </h2>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="addWorkspaceActivityBtn"
+                            class="workspace-primary-btn"
+                        >
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Add Activity
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- ACTIVITY FORM -->
+
+                    <div
+                        id="workspaceActivityForm"
+                        class="workspace-form"
+                        style="display:none;"
+                    >
+
+                        <div class="workspace-form-group">
+
+                            <label for="workspaceActivityTitle">
+                                Activity Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="workspaceActivityTitle"
+                                placeholder="e.g. Design project landing page"
+                            >
+
+                        </div>
+
+
+                        <div class="workspace-form-group">
+
+                            <label for="workspaceActivityDescription">
+                                Description
+                            </label>
+
+                            <textarea
+                                id="workspaceActivityDescription"
+                                rows="3"
+                                placeholder="Describe what you need to accomplish..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="workspace-form-actions">
+
+                            <button
+                                type="button"
+                                id="saveWorkspaceActivityBtn"
+                                class="workspace-primary-btn"
+                            >
+                                Save Activity
+                            </button>
+
+                            <button
+                                type="button"
+                                id="cancelWorkspaceActivityBtn"
+                                class="workspace-cancel-btn"
+                            >
+                                Cancel
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="workspaceActivities"
+                        class="workspace-activities"
+                    >
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+
+
+            <!-- RIGHT -->
+
+            <aside class="workspace-sidebar">
+
+
+                <!-- MY ROLE -->
+
+                <section class="workspace-card role-card">
+
+                    <div class="workspace-small-title">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <span>
+                            My Role
+                        </span>
+
+                    </div>
+
+
+                    <h3 id="workspaceRole">
+                        Project Contributor
+                    </h3>
+
+
+                    <p>
+                        Your role in this project.
+                    </p>
+
+                </section>
+
+
+
+                <!-- PROGRESS -->
+
+                <section class="workspace-card">
+
+                    <div class="workspace-small-title">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <span>
+                            My Progress
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="workspace-progress-number"
+                        id="workspaceProgressNumber"
+                    >
+                        0%
+                    </div>
+
+
+                    <div class="workspace-progress-bar">
+
+                        <div
+                            id="workspaceProgressFill"
+                            class="workspace-progress-fill"
+                        ></div>
+
+                    </div>
+
+
+                    <p
+                        id="workspaceProgressText"
+                        class="workspace-progress-text"
+                    >
+                        No completed activities yet.
+                    </p>
+
+                </section>
+
+
+
+                <!-- TEAM -->
+
+                <section class="workspace-card">
+
+                    <div class="workspace-small-title">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <span>
+                            Project Team
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="workspaceTeam"
+                        class="workspace-team"
+                    >
+
+                    </div>
+
+                </section>
+
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- EVIDENCE MODAL -->
+
+<div
+    id="evidenceModal"
+    class="evidence-modal"
+    style="display:none;"
+>
+
+    <div class="evidence-modal-content">
+
+        <div class="evidence-modal-header">
+
+            <div>
+
+                <span class="section-label">
+                    VERIFICATION
+                </span>
+
+                <h2>
+                    Submit Evidence
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="closeEvidenceModal"
+                class="evidence-close-btn"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <p class="evidence-help">
+
+            Add proof that you completed this activity.
+            This could be a screenshot, certificate,
+            project link, document or other relevant evidence.
+
+        </p>
+
+
+        <div class="workspace-form-group">
+
+            <label>
+                Evidence Name
+            </label>
+
+            <input
+                type="text"
+                id="evidenceName"
+                placeholder="e.g. Landing page screenshot"
+            >
+
+        </div>
+
+
+        <div class="workspace-form-group">
+
+            <label>
+                Evidence Link
+            </label>
+
+            <input
+                type="url"
+                id="evidenceLink"
+                placeholder="https://github.com/..."
+            >
+
+        </div>
+
+
+        <div class="workspace-form-group">
+
+            <label>
+                Additional Note
+            </label>
+
+            <textarea
+                id="evidenceNote"
+                rows="3"
+                placeholder="Explain what this evidence proves..."
+            ></textarea>
+
+        </div>
+
+
+        <div class="evidence-modal-actions">
+
+            <button
+                type="button"
+                id="cancelEvidenceBtn"
+                class="workspace-cancel-btn"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                type="button"
+                id="saveEvidenceBtn"
+                class="workspace-primary-btn"
+            >
+
+                <i class="fa-solid fa-paperclip"></i>
+
+                Submit Evidence
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <script src="../js/project-workspace.js"></script>
+
+</body>
+
+</html>

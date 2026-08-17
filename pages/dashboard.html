@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | SkillBridge</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="../index.html" class="logo">
+                Skill<span>Bridge</span>
+            </a>
+
+            <div class="nav-actions">
+
+                <a href="profile.html" class="primary-btn">
+                    My Profile
+                </a>
+
+                <a href="../index.html" class="login-btn">
+                    Logout
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="dashboard-page">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span>STUDENT DASHBOARD</span>
+
+                    <h2 id="welcomeMessage">
+                        Welcome to SkillBridge
+                    </h2>
+
+                    <p>
+                        Your skills, projects and opportunities
+                        all in one place.
+                    </p>
+
+                </div>
+
+
+                <div class="project-grid">
+
+                    <div class="project-card">
+
+                        <div class="project-category">
+                            🎯 PROFILE
+                        </div>
+
+                        <h3>
+                            Complete Your Profile
+                        </h3>
+
+                        <p>
+                            Add your skills, experience and interests
+                            so SkillBridge can find better matches.
+                        </p>
+
+                        <a
+                            href="profile.html"
+                            class="primary-btn"
+                        >
+                            Complete Profile
+                        </a>
+
+                    </div>
+
+
+                    <div class="project-card">
+
+                        <div class="project-category">
+                            🚀 PROJECTS
+                        </div>
+
+                        <h3>
+                            Discover Projects
+                        </h3>
+
+                        <p>
+                            Find projects where your skills can
+                            contribute.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="secondary-btn"
+                        >
+                            Explore Projects
+                        </a>
+
+                    </div>
+
+
+                    <div class="project-card">
+
+                        <div class="project-category">
+                            💡 SKILLS
+                        </div>
+
+                        <h3>
+                            Manage Your Skills
+                        </h3>
+
+                        <p>
+                            Add the skills you already have and
+                            the ones you want to learn.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="secondary-btn"
+                        >
+                            Manage Skills
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        const savedUser =
+            JSON.parse(
+                localStorage.getItem("skillbridgeUser")
+            );
+
+        const welcomeMessage =
+            document.getElementById("welcomeMessage");
+
+
+        if (savedUser) {
+
+            welcomeMessage.textContent =
+                `Welcome, ${savedUser.fullname} 👋`;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
